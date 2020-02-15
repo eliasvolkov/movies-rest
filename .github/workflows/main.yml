@@ -6,7 +6,7 @@ on:
         - master
 
 jobs:
-  init project:
+  init_project:
 
     runs-on: ubuntu-latest
 
