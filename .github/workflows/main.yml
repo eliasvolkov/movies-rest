@@ -9,10 +9,6 @@ jobs:
   buildAndTest: # Название
     runs-on: ubuntu-latest # ОС на которой запускаемся
 
-    strategy: # Это стратегия запусков
-      matrix: # Запускать это задание с разными параметрами
-        node-version: [8.x, 10.x, 12.x] # Версии ноды
-
     steps: # Шаги выполнения
     - uses: actions/checkout@v1 
     - name: Use Node.js 12.x # Установим ноду
@@ -24,7 +20,6 @@ jobs:
       run: |
         yarn
         yarn build
-        yarn test
         yarn lint
       env: # В окружении устанавливаем CI в истину 
         CI: truebuild
