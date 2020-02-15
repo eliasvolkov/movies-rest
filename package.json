@@ -19,7 +19,7 @@
     },
     "scripts": {
         "start": "react-scripts start",
-        "build": "rm src/**/*.stories.tsx && react-scripts build",
+        "build": "find . -name *.stories.tsx -type f -delete && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 9009 -s public",
