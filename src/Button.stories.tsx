@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button } from './Button';
 
-// tslint:disable-next-line: no-default-export
 export default {
     title: 'Button',
     component: Button,
