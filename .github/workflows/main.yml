@@ -19,7 +19,7 @@ jobs:
     - name: Install, build, test # Выполняем необходимые команды
       run: |
         yarn
-        yarn build
         yarn lint
+        yarn build
       env: # В окружении устанавливаем CI в истину 
         CI: truebuild
