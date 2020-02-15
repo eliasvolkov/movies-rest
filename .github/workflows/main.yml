@@ -12,10 +12,20 @@ jobs:
 
     steps:
     - name: Clone repo 
-    - uses: actions/checkout@v2
+      uses: actions/checkout@v2
+    
+    - name: Setup node
+      uses: actions/setup-node@v1
+      with:
+          node-version: 10.x
+          registry-url: https://registry.npmjs.org/
+
+    - name: cache node modules
+      uses: actions/cache@v1
+      id: cache
       
     - name: Run linter
-      uses: yarn lint
+      run: yarn lint
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
