@@ -1,10 +1,15 @@
+import { Headline1 } from 'atoms/Headline1/Headline1';
 import React from 'react';
+import { Reset } from 'styled-reset';
+import { GlobalStyle } from './globalStyles';
 
 function App() {
     return (
-        <div className="App">
-            <h3>Apple</h3>
-        </div>
+        <>
+            <Reset />
+            <GlobalStyle />
+            <Headline1>Welcome</Headline1>
+        </>
     );
 }
 
