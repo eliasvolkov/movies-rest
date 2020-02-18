@@ -8,7 +8,7 @@ function App() {
         <>
             <Reset />
             <GlobalStyle />
-            <Headline1>Welcome</Headline1>
+            <Headline1>Welcome Back</Headline1>
         </>
     );
 }
