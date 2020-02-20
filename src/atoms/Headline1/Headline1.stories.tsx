@@ -13,6 +13,11 @@ export const Default = () => <Headline1>Starnger things</Headline1>;
 export const WithSubtitle = () => (
     <>
         <Headline1>Starnger things</Headline1>
-        <Subtitle1> Othet text</Subtitle1>
+        <Subtitle1>
+            {' '}
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, tempore laboriosam? Necessitatibus
+            ducimus tempore possimus blanditiis similique officia! Asperiores non error ducimus eius repudiandae
+            necessitatibus praesentium enim dicta repellat saepe!
+        </Subtitle1>
     </>
 );
