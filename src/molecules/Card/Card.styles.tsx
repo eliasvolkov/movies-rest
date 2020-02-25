@@ -7,16 +7,20 @@ export const ImgWrapper = styled.div`
     margin-bottom: 1rem;
     position: relative;
 
-    &:before {
+    &:after {
         content: '';
         position: absolute;
+        display: block;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
         z-index: 5;
         background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 1rem;
+        border: none;
         opacity: 0;
+        transition: all 0.3s;
     }
 `;
 export const Img = styled.img`
@@ -32,7 +36,7 @@ export const BottomWrapper = styled.div`
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
 `;
 export const IconsWrapper = styled.div`
     display: flex;
@@ -50,14 +54,16 @@ export const IconHeart = styled(Heart)`
 
 export const MovieInfo = styled.div`
     position: absolute;
+    display: block;
     width: 100%;
-    height: 77%;
+    height: 100%;
     top: 0;
     left: 0;
     z-index: 3;
-    background-color: rgba(0, 0, 0, 0.4);
     opacity: 0;
     transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.4);
+
     color: red;
 `;
 
@@ -80,7 +86,13 @@ export const Wrapper = styled.div`
 
         ${Img} {
             filter: blur(0.5rem);
-            transform: scale(1.1, 1.1);
+
+            /* transform: scale(1.1, 1.1); */
+        }
+        ${ImgWrapper} {
+            /* opacity: 1;
+            filter: blur(0.5rem); */
+            /* transform: scale(1.1, 1.1); */
         }
     }
 `;
