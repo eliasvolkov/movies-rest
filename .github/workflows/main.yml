@@ -1,9 +1,8 @@
 name: my-CI
 
-on: 
-  push:
-    branches: 
-      - master
+on:
+  pull_request:
+    branches: dev
 
 jobs:
   buildAndTest: # Название
