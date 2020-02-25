@@ -19,9 +19,9 @@ body {
       height: 100%;
   }
 
-  @media screen and (max-width: 500px){
+  /* @media screen and (max-width: 500px){
       html{
           font-size: 30%;
       }
-  }
+  } */
   `;
