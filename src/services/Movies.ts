@@ -12,13 +12,22 @@ export const getPopularMovies = async (page: number = 1) => {
     return response.data;
 };
 
+export const searchMovies = async (page: number = 1, query: string) => {
+    const url = `${baseUrl}/search/movie?${keyQuery}&language=en-US&query=${query}&page=${page}&include_adult=false`;
+
+    const response = await axios.get(url);
+
+    return response.data;
+};
+
 // It's required to add type instead of 'any'
 const matchingApiObject: { [unit: string]: any } = {
     popularMovies: getPopularMovies,
+    searchMovies,
 };
 
-export const loadMore = async (name: string, currentPage: number = 2) => {
+export const loadMore = async (name: string, currentPage: number = 2, query?: string) => {
     const page = currentPage + 1;
-    const response = await matchingApiObject[name].call(null, page);
+    const response = await matchingApiObject[name].call(null, page, query);
     return response;
 };

@@ -1,8 +1,9 @@
+import { Card } from 'molecules/Card/Card';
 import { Header } from 'organisms/Header/Header';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { getPopularMovies } from 'services/Movies';
-import { GridThemeProvider } from 'styled-bootstrap-grid';
+import { Col, Container, GridThemeProvider, Row } from 'styled-bootstrap-grid';
 import { Reset } from 'styled-reset';
 import { GlobalStyle } from './globalStyles';
 
@@ -23,6 +24,7 @@ const gridTheme = {
     },
     row: {
         padding: 10, // default 15
+        margin: 0,
     },
     col: {
         padding: 5, // default 15
@@ -47,8 +49,13 @@ const gridTheme = {
 };
 
 function App() {
+    const [movies, setMovies] = useState([]);
     useEffect(() => {
-        getPopularMovies();
+        const getMovies = async () => {
+            const response = await getPopularMovies();
+            setMovies(response.results);
+        };
+        getMovies();
     }, []);
     return (
         <GridThemeProvider gridTheme={gridTheme}>
@@ -56,6 +63,16 @@ function App() {
                 <Reset />
                 <GlobalStyle />
                 <Header />
+                <Container>
+                    <Row>
+                        {movies &&
+                            movies.map(movie => (
+                                <Col xs={3} sm={3} md={2} lg={1}>
+                                    <Card {...movie} />
+                                </Col>
+                            ))}
+                    </Row>
+                </Container>
             </Router>
         </GridThemeProvider>
     );

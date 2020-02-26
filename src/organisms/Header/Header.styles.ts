@@ -27,11 +27,13 @@ export const NavWrapper = styled.div<INavWrapper>`
         transition: all 0.5s;
         width: 50%;
         height: 100vh;
+        overflow: hidden;
         position: fixed;
         top: 0;
         right: 0;
         margin-right: ${({ isOpen }) => (isOpen ? '0' : '-50%')};
         background-color: ${COLORS.background};
+        z-index: 100;
     }
 `;
 
@@ -39,6 +41,8 @@ export const MenuIcon = styled(Menu2)`
     color: ${COLORS.primaryText};
     display: none;
     margin-left: auto;
+    position: sticky;
+
     cursor: pointer;
 
     @media screen and (max-width: 995px) {
