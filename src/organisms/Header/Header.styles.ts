@@ -13,7 +13,8 @@ export const Wrapper = styled.div`
     color: white;
     padding: 2rem;
     padding-bottom: 0;
-    align-items: baseline;
+    align-items: center;
+    margin-bottom: 2rem;
 `;
 export const LogoWrapper = styled.div`
     width: 9rem;

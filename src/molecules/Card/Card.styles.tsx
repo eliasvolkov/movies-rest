@@ -71,7 +71,8 @@ export const Wrapper = styled.div`
     position: relative;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    /* height: 100%; */
 
     padding: 1rem;
     margin-bottom: 3rem;
@@ -81,7 +82,7 @@ export const Wrapper = styled.div`
     &:hover {
         /* transform: scale(1.1); */
         ${MovieInfo} {
-            opacity: 1;
+            /* opacity: 1; */
         }
 
         ${Img} {
