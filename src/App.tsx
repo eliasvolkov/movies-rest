@@ -1,6 +1,6 @@
 import { Header } from 'organisms/Header/Header';
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { GridThemeProvider } from 'styled-bootstrap-grid';
 import { Reset } from 'styled-reset';
 import { GlobalStyle } from './globalStyles';

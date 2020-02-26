@@ -26,16 +26,32 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
             height: 0.8rem;
             margin-top: 2rem;
             background-color: ${COLORS.primaryButton};
+
+            @media screen and (max-width: 995px) {
+                margin-top: 0;
+                display: none;
+            }
         }
+    }
+
+    @media screen and (max-width: 995px) {
+        flex-direction: row-reverse;
+        align-items: center;
+
+        margin-bottom: 5rem;
+        margin-left: 0;
     }
 `;
 
 export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-left: -7rem;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 995px) {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
     }
 `;
