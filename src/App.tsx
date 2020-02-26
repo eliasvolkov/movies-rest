@@ -1,6 +1,7 @@
 import { Header } from 'organisms/Header/Header';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { getPopularMovies } from 'services/Movies';
 import { GridThemeProvider } from 'styled-bootstrap-grid';
 import { Reset } from 'styled-reset';
 import { GlobalStyle } from './globalStyles';
@@ -46,6 +47,9 @@ const gridTheme = {
 };
 
 function App() {
+    useEffect(() => {
+        getPopularMovies();
+    }, []);
     return (
         <GridThemeProvider gridTheme={gridTheme}>
             <Router>
