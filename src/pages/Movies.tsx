@@ -1,8 +1,9 @@
 import { Button } from 'Button';
+import { Row } from 'globalStyles';
 import { Card } from 'molecules/Card/Card';
 import React, { useEffect, useState } from 'react';
 import { getPopularMovies } from 'services/Movies';
-import { Col, Container, Row } from 'styled-bootstrap-grid';
+import { Col } from 'styled-bootstrap-grid';
 
 export const Movies: React.FC = () => {
     const [movies, setMovies] = useState([]);

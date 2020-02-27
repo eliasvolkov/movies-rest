@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import { COLORS } from './constants/ui';
 
 export const GlobalStyle = createGlobalStyle`
@@ -25,3 +25,9 @@ body {
       }
   } */
   `;
+
+export const Row = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`;

@@ -7,6 +7,13 @@ interface INavWrapper {
     isOpen: boolean;
 }
 
+export const HeaderWrapper = styled.div`
+    width: calc(100vw);
+    position: absolute;
+    z-index: 15;
+    padding: 2rem 0;
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.2);
+`;
 export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
