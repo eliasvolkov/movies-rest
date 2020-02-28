@@ -61,3 +61,16 @@ export const Genres = styled.p`
         margin-left: 1rem;
     }
 `;
+
+export const PrimaryButton = styled.button`
+    margin-top: 3rem;
+    background-color: ${COLORS.primaryButton};
+    color: ${COLORS.primaryText};
+    border: none;
+    border-radius: 5rem;
+    padding: 2rem 7rem;
+    font-size: 2rem;
+    font-weight: bold;
+    box-shadow: 0 0.4rem 2.5rem ${COLORS.primaryButton};
+    outline: none;
+`;

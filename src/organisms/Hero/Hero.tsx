@@ -3,7 +3,7 @@ import { Rating } from 'atoms/Rating/Rating';
 import { Subtitle1 } from 'atoms/Subtitle1/Subtitle1';
 import React from 'react';
 import { Col, Container } from 'styled-bootstrap-grid';
-import { Genres, HeroWrapper, InfoWrapper, P3, RateWrapper, Row } from './Hero.styles';
+import { Genres, HeroWrapper, InfoWrapper, P3, PrimaryButton, RateWrapper, Row } from './Hero.styles';
 
 interface IHeroProps {
     backdrop_path: string | null;
@@ -31,6 +31,7 @@ export const Hero: React.FC<IHeroProps> = ({ backdrop_path }) => {
                                 this live-action adventure comedy, Sonic and his new best friend team up to defend the
                                 planet from the evil genius Dr. Robotnik and his plans for world domination."
                             </Subtitle1>
+                            <PrimaryButton>Watch</PrimaryButton>
                         </InfoWrapper>
                     </Col>
                 </Row>
