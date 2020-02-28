@@ -19,11 +19,11 @@ body {
       height: 100%;
   }
 
-  /* @media screen and (max-width: 500px){
+  @media screen and (max-width: 500px){
       html{
-          font-size: 30%;
+          font-size: 50%;
       }
-  } */
+  }
   `;
 
 export const Row = styled.div`
