@@ -8,7 +8,7 @@ interface INavWrapper {
 }
 
 export const HeaderWrapper = styled.div`
-    width: calc(100vw);
+    width: 100%;
     position: absolute;
     z-index: 15;
     padding: 2rem 0;
