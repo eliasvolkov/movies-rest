@@ -47,11 +47,11 @@ export const Hero: React.FC<IHeroProps> = ({ title, overview, runtime, vote_aver
                             <Subtitle1>{overview}</Subtitle1>
                             <Buttons>
                                 <PrimaryButton>
-                                    <Button isPrimary label="Add list">
+                                    <Button isPrimary label="Add list" onClick={() => {}}>
                                         <Icon size={33} />
                                     </Button>
                                 </PrimaryButton>
-                                <Button label="more info"></Button>
+                                <Button label="more info" onClick={() => {}}></Button>
                             </Buttons>
                         </InfoWrapper>
                     </Col>
