@@ -1,15 +1,21 @@
 import { COLORS } from 'constants/ui';
 import styled from 'styled-components';
-import { Star } from 'styled-icons/remix-fill/Star';
+import { StarS } from 'styled-icons/remix-fill/StarS';
 
-export const StyledSpan = styled.span`
-    color: ${COLORS.gold};
-    font-size: 1.4rem;
+interface IRating {
+    color?: string;
+    fontSize?: string;
+}
+
+export const StyledSpan = styled.span<IRating>`
+    color: ${({ color }) => color || COLORS.gold};
+    font-size: ${({ fontSize }) => fontSize || '1.4rem'};
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 `;
 
-export const Icon = styled(Star)`
+export const Icon = styled(StarS)`
     margin-right: 0.5rem;
+    color: ${COLORS.gold};
 `;

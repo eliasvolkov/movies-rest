@@ -14,7 +14,7 @@ const Home: React.FC = () => {
     return (
         <div>
             {/* <Headline1>Home</Headline1> */}
-            <Hero backdrop_path="/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg" />
+            <Hero backdrop_path="/oqShe6HXsmSmpK4SDae6muJBwjT.jpg" />
             {/* <Navigation links={links} /> */}
             <Route path="/home/trends" component={Trends} />
         </div>

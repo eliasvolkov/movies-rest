@@ -44,8 +44,13 @@ export const P3 = styled.p`
 export const RateWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     width: 100%;
     margin: 3rem 0;
+`;
+
+export const Rate = styled.div`
+    margin-right: 1.5rem;
 `;
 
 export const Genres = styled.p`
@@ -54,45 +59,31 @@ export const Genres = styled.p`
     font-weight: 500;
     font-size: 1.2rem;
 
-    /* vertical-align: middle; */
     &:not(:last-child):after {
         content: '|';
         display: inline;
         color: #8a8a8a;
         margin-left: 1rem;
     }
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
 `;
 
-export const PrimaryButton = styled.button`
-    margin-top: 3rem;
-    background-color: ${COLORS.primaryButton};
-    color: ${COLORS.primaryText};
-    border: none;
-    border-radius: 5rem;
-    text-transform: uppercase;
-    padding: 1.8rem 5rem;
-    /* padding: 1.5rem 0; */
-    /* min-width: 20rem; */
-    font-size: 2rem;
-    font-weight: bold;
-    box-shadow: 0 0.4rem 2.5rem ${COLORS.primaryButton};
-    outline: none;
-
+export const Buttons = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
+    margin-top: 7rem;
 `;
-export const ButtonLabel = styled.p`
-    font-family: ${FONTS.primaryFont};
-    font-size: 2.2rem;
-    font-weight: bold;
+
+export const PrimaryButton = styled.div`
+    margin-right: 3rem;
+    background-color: none;
 `;
 
 export const Icon = styled(Add)`
     color: ${COLORS.primaryText};
-    /* font-weight: bold; */
-    font-size: 2rem;
-    /* margin-left: 2rem; */
 `;
