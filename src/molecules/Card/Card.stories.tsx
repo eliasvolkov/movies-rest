@@ -12,7 +12,7 @@ export default {
 export const Default = () => (
     <Row>
         <Col md={2}>
-            <Card title="Lady in red" img="/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" rating={6.7} />
+            {/* <Card title="Lady in red" poster_path="/xBHvZcjRiWyobQ9kxBhO6B2dtRI.jpg" rating={6.7} /> */}
         </Col>
     </Row>
 );

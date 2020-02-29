@@ -1,6 +1,8 @@
 import { Header } from 'organisms/Header/Header';
+import Home from 'pages/Home/Home';
+import { Movies } from 'pages/Movies';
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
 import { GridThemeProvider } from 'styled-bootstrap-grid';
 import { Reset } from 'styled-reset';
 import { GlobalStyle } from './globalStyles';
@@ -22,6 +24,7 @@ const gridTheme = {
     },
     row: {
         padding: 10, // default 15
+        margin: 0,
     },
     col: {
         padding: 5, // default 15
@@ -52,6 +55,11 @@ function App() {
                 <Reset />
                 <GlobalStyle />
                 <Header />
+                <Switch>
+                    <Route path="/home" component={Home} />
+                    <Route path="/movies" component={Movies} />
+                    <Redirect exact from="/" to="/home/trends" />
+                </Switch>
             </Router>
         </GridThemeProvider>
     );

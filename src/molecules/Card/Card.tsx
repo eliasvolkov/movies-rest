@@ -6,21 +6,21 @@ import { BottomWrapper, IconsWrapper, Img, ImgWrapper, MovieInfo, Wrapper } from
 
 interface ICardPros {
     title: string;
-    img: string;
-    rating: number;
+    poster_path: string;
+    vote_average: number;
 }
 
-export const Card: React.FC<ICardPros> = ({ title, img, rating }) => {
+export const Card: React.FC<ICardPros> = ({ title, poster_path, vote_average }) => {
     return (
         <Wrapper>
             <ImgWrapper>
-                <Img src={`https://image.tmdb.org/t/p/w780/${img}`} alt={title} />
+                <Img src={`https://image.tmdb.org/t/p/w780${poster_path}`} alt={title} />
             </ImgWrapper>
             <Headline2> {title}</Headline2>
             <BottomWrapper>
                 <Subtitle2>2019</Subtitle2>
                 <IconsWrapper>
-                    <Rating title={rating} />
+                    <Rating title={vote_average} />
                 </IconsWrapper>
             </BottomWrapper>
             <MovieInfo>lll</MovieInfo>

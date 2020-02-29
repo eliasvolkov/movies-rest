@@ -9,9 +9,10 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
     font-family: ${FONTS.navLink};
     font-size: 2rem;
     text-align: center;
-    display: flex;
+    position: relative;
+    /* display: flex;
     flex-flow: column wrap;
-    align-items: center;
+    align-items: center; */
     margin-left: 7rem;
     text-decoration: none;
     transition: all 0.5s;
@@ -21,21 +22,42 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
 
         &:after {
             content: '';
+            display: block;
             border-radius: 5rem;
             width: 0.8rem;
             height: 0.8rem;
-            margin-top: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 150%;
+            /* margin-top: 2rem; */
             background-color: ${COLORS.primaryButton};
+
+            @media screen and (max-width: 995px) {
+                margin-top: 0;
+                display: none;
+            }
         }
+    }
+
+    @media screen and (max-width: 995px) {
+        flex-direction: row-reverse;
+        align-items: center;
+
+        margin-bottom: 5rem;
+        margin-left: 0;
     }
 `;
 
 export const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-left: -7rem;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 995px) {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 100%;
     }
 `;
