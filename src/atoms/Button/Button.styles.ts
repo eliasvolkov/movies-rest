@@ -1,6 +1,5 @@
 import { COLORS, FONTS } from 'constants/ui';
 import styled from 'styled-components';
-import { Add } from 'styled-icons/remix-fill/Add';
 
 interface IStyledButton {
     isPrimary?: boolean;
@@ -39,11 +38,4 @@ export const ButtonLabel = styled.p`
     font-family: ${FONTS.primaryFont};
     font-size: 2.2rem;
     font-weight: bold;
-`;
-
-export const Icon = styled(Add)`
-    color: ${COLORS.primaryText};
-    /* font-weight: bold; */
-
-    /* margin-left: 2rem; */
 `;

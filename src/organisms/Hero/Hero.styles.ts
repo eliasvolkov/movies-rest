@@ -23,10 +23,6 @@ export const HeroWrapper = styled.div<IHeroWrapper>`
         background-color: rgba(0, 0, 0, 0.65);
         z-index: -1;
     }
-
-    @media screen and (max-width: 500px) {
-        /* transform: scale(1.2); */
-    }
 `;
 
 export const Row = styled.div`
@@ -41,7 +37,6 @@ export const Row = styled.div`
 
 export const InfoWrapper = styled.div`
     margin-top: 30rem;
-    /* border: 1px solid red; */
 `;
 
 export const P3 = styled.p`
