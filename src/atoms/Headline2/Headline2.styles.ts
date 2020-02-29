@@ -8,5 +8,5 @@ export const H2 = styled.h2`
     font-size: 1.6rem;
 
     margin-top: 3rem;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
 `;

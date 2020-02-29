@@ -3,12 +3,15 @@ import { Icon, StyledSpan } from './Rating.styles';
 
 interface IRatingProps {
     title: number;
+    iconSize?: number;
+    color?: string;
+    fontSize?: string;
 }
 
-export const Rating: React.FC<IRatingProps> = ({ title }) => {
+export const Rating: React.FC<IRatingProps> = ({ title, iconSize, color, fontSize }) => {
     return (
-        <StyledSpan>
-            <Icon size={14} />
+        <StyledSpan color={color} fontSize={fontSize}>
+            <Icon size={iconSize || 19} />
             {title}
         </StyledSpan>
     );

@@ -9,9 +9,7 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
     font-family: ${FONTS.navLink};
     font-size: 2rem;
     text-align: center;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
+    position: relative;
     margin-left: 7rem;
     text-decoration: none;
     transition: all 0.5s;
@@ -21,10 +19,14 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
 
         &:after {
             content: '';
+            display: block;
             border-radius: 5rem;
             width: 0.8rem;
             height: 0.8rem;
-            margin-top: 2rem;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            top: 150%;
             background-color: ${COLORS.primaryButton};
 
             @media screen and (max-width: 995px) {

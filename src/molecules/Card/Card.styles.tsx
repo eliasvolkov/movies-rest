@@ -36,7 +36,6 @@ export const BottomWrapper = styled.div`
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    /* margin-top: 2rem; */
 `;
 export const IconsWrapper = styled.div`
     display: flex;
@@ -71,7 +70,6 @@ export const Wrapper = styled.div`
     position: relative;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
 
     padding: 1rem;
     margin-bottom: 3rem;
@@ -79,20 +77,13 @@ export const Wrapper = styled.div`
     cursor: pointer;
 
     &:hover {
-        /* transform: scale(1.1); */
         ${MovieInfo} {
-            opacity: 1;
         }
 
         ${Img} {
             filter: blur(0.5rem);
-
-            /* transform: scale(1.1, 1.1); */
         }
         ${ImgWrapper} {
-            /* opacity: 1;
-            filter: blur(0.5rem); */
-            /* transform: scale(1.1, 1.1); */
         }
     }
 `;
