@@ -1,4 +1,4 @@
-import { COLORS, FONTS } from 'constants/ui';
+import { COLORS } from 'constants/ui';
 import styled from 'styled-components';
 import { Add } from 'styled-icons/remix-fill/Add';
 
@@ -23,12 +23,20 @@ export const HeroWrapper = styled.div<IHeroWrapper>`
         background-color: rgba(0, 0, 0, 0.65);
         z-index: -1;
     }
+
+    @media screen and (max-width: 500px) {
+        /* transform: scale(1.2); */
+    }
 `;
 
 export const Row = styled.div`
     display: flex;
     flex-wrap: wrap;
     height: 100%;
+
+    @media screen and (max-width: 500px) {
+        padding: 0 1.3rem;
+    }
 `;
 
 export const InfoWrapper = styled.div`

@@ -19,7 +19,7 @@ export const Movies: React.FC = () => {
             <Row>
                 {movies &&
                     movies.map(movie => (
-                        <Col xs={7} sm={5} md={3} lg={2}>
+                        <Col xs={5} sm={5} md={3} lg={2}>
                             <Card {...movie} />
                         </Col>
                     ))}
