@@ -10,9 +10,6 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
     font-size: 2rem;
     text-align: center;
     position: relative;
-    /* display: flex;
-    flex-flow: column wrap;
-    align-items: center; */
     margin-left: 7rem;
     text-decoration: none;
     transition: all 0.5s;
@@ -30,7 +27,6 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
             left: 50%;
             transform: translate(-50%, -50%);
             top: 150%;
-            /* margin-top: 2rem; */
             background-color: ${COLORS.primaryButton};
 
             @media screen and (max-width: 995px) {

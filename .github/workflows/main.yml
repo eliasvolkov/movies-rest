@@ -1,34 +1,30 @@
 name: my-CI
 
 on:
-  pull_request:
-    branches: 
-      - dev
+    pull_request:
+        branches:
+            - dev
 
 jobs:
-  buildAndTest: # Название
-    runs-on: ubuntu-latest # ОС на которой запускаемся
+    buildAndTest: # Название
+        runs-on: ubuntu-latest # ОС на которой запускаемся
 
-    steps: # Шаги выполнения
-    - uses: actions/checkout@v1 
-    - name: Use Node.js 12.x # Установим ноду
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.x
+        steps: # Шаги выполнения
+            - uses: actions/checkout@v1
+            - name: Use Node.js 12.x # Установим ноду
+              uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
 
-    - name: Install, build, test # Выполняем необходимые команды
-      run: |
-        yarn
-        yarn lint
-        yarn build
-      env: # В окружении устанавливаем CI в истину
-        HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
-        HEROKU_APP_NAME: "ifmo-blog" 
-        CI: truebuild
-    
-    - name: Deploy to Heroku
-      run: git --version
-  
-   
-    
-    
+            - name: Install, build, test # Выполняем необходимые команды
+              run: |
+                  yarn
+                  yarn lint
+                  yarn build
+              env: # В окружении устанавливаем CI в истину
+                  HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
+                  HEROKU_APP_NAME: 'ifmo-blog'
+                  CI: truebuild
+
+            - name: Deploy to Heroku
+              run: git --version
