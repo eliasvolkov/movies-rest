@@ -1,7 +1,7 @@
-import { Button } from 'atoms/Button/Button';
-import { Headline1 } from 'atoms/Headline1/Headline1';
-import { Rating } from 'atoms/Rating/Rating';
-import { Subtitle1 } from 'atoms/Subtitle1/Subtitle1';
+import { Button } from 'components/atoms/Button/Button';
+import { Headline1 } from 'components/atoms/Headline1/Headline1';
+import { Rating } from 'components/atoms/Rating/Rating';
+import { Subtitle1 } from 'components/atoms/Subtitle1/Subtitle1';
 import React from 'react';
 import { Col, Container } from 'styled-bootstrap-grid';
 import { Genre } from 'types/MovieDetails';
@@ -16,6 +16,7 @@ import {
     Rate,
     RateWrapper,
     Row,
+    StyledInfo,
 } from './Hero.styles';
 
 interface IHeroProps {
@@ -32,7 +33,7 @@ export const Hero: React.FC<IHeroProps> = ({ title, overview, runtime, vote_aver
         <HeroWrapper backgroundImage={backdrop_path}>
             <Container>
                 <Row>
-                    <Col md={6} lgOffset={1}>
+                    <Col sm={8} md={6} smOffset={1}>
                         <InfoWrapper>
                             <P3>Duration: {runtime}</P3>
                             <RateWrapper>
@@ -47,11 +48,13 @@ export const Hero: React.FC<IHeroProps> = ({ title, overview, runtime, vote_aver
                             <Subtitle1>{overview}</Subtitle1>
                             <Buttons>
                                 <PrimaryButton>
-                                    <Button isPrimary label="Add list">
-                                        <Icon size={33} />
+                                    <Button isPrimary label="Add list" onClick={() => {}}>
+                                        <Icon />
                                     </Button>
                                 </PrimaryButton>
-                                <Button label="more info"></Button>
+                                <Button label="more info" onClick={() => {}}>
+                                    <StyledInfo />
+                                </Button>
                             </Buttons>
                         </InfoWrapper>
                     </Col>

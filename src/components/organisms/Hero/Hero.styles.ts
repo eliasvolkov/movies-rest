@@ -1,5 +1,6 @@
 import { COLORS } from 'constants/ui';
 import styled from 'styled-components';
+import { MoreVertical } from 'styled-icons/feather/MoreVertical';
 import { Add } from 'styled-icons/remix-fill/Add';
 
 interface IHeroWrapper {
@@ -25,7 +26,7 @@ export const HeroWrapper = styled.div<IHeroWrapper>`
     }
 
     @media screen and (max-width: 380px) {
-        height: auto;
+        /* height: auto; */
         padding-bottom: 7rem;
     }
 `;
@@ -94,4 +95,10 @@ export const PrimaryButton = styled.div`
 
 export const Icon = styled(Add)`
     color: ${COLORS.primaryText};
+    width: 3.5rem;
+`;
+export const StyledInfo = styled(MoreVertical)`
+    color: ${COLORS.primaryText};
+    width: 3.5rem;
+    /* margin-right: 1.2rem; */
 `;

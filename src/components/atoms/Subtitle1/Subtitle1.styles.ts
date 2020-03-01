@@ -1,5 +1,5 @@
+import { COLORS, FONTS } from 'constants/ui';
 import styled from 'styled-components';
-import { COLORS, FONTS } from '../../constants/ui';
 
 export const P = styled.p`
     font-family: ${FONTS.iconLink};

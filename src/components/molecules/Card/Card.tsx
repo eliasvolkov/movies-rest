@@ -1,6 +1,6 @@
-import { Headline2 } from 'atoms/Headline2/Headline2';
-import { Rating } from 'atoms/Rating/Rating';
-import { Subtitle2 } from 'atoms/Subtitle2/Subtitle2';
+import { Headline2 } from 'components/atoms/Headline2/Headline2';
+import { Rating } from 'components/atoms/Rating/Rating';
+import { Subtitle2 } from 'components/atoms/Subtitle2/Subtitle2';
 import React from 'react';
 import { BottomWrapper, IconsWrapper, Img, ImgWrapper, MovieInfo, Wrapper } from './Card.styles';
 
