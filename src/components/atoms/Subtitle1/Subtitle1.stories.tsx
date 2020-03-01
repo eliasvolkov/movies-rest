@@ -1,4 +1,4 @@
-import { Headline1 } from 'atoms/Headline1/Headline1';
+import { Headline1 } from 'components/atoms/Headline1/Headline1';
 import React from 'react';
 import { Subtitle1 } from '../Subtitle1/Subtitle1';
 

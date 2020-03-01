@@ -1,3 +1,12 @@
+export const BREAKPOINTS = {
+    xl: 1904,
+    lg: 1264,
+    md: 960,
+    sm: 600,
+    xs: 400,
+    xxs: 350,
+};
+
 export const uiConstants = {
     superRedColor: '#ff261a',
     oneBlack: '#28282f',

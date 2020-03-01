@@ -1,5 +1,5 @@
+import { COLORS, FONTS } from 'constants/ui';
 import styled from 'styled-components';
-import { COLORS, FONTS } from '../../constants/ui';
 
 export const H1 = styled.h1`
     font-family: ${FONTS.primaryFont};

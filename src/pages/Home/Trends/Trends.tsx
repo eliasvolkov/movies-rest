@@ -1,4 +1,4 @@
-import { Headline1 } from 'atoms/Headline1/Headline1';
+import { Headline1 } from 'components/atoms/Headline1/Headline1';
 import { observer } from 'mobx-react';
 import Movies from 'pages/Movies';
 import React from 'react';

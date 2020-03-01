@@ -33,9 +33,22 @@ export const StyledButton = styled.button<IStyledButton>`
     &:active {
         box-shadow: 0 0 0 2px ${COLORS.primaryButton};
     }
+
+    @media screen and (max-width: 960px) {
+        width: 17rem;
+        min-width: 0rem;
+        font-size: 1.5rem;
+        padding: 0.8rem 0;
+    }
+    @media screen and (max-width: 650px) {
+        width: 17rem;
+        min-width: 0rem;
+        font-size: 1.3rem;
+        padding: 0.5rem 0;
+    }
 `;
 export const ButtonLabel = styled.p`
     font-family: ${FONTS.primaryFont};
-    font-size: 2.2rem;
+    /* font-size: 2.2rem; */
     font-weight: bold;
 `;

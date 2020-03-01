@@ -1,5 +1,5 @@
+import { COLORS } from 'constants/ui';
 import styled from 'styled-components';
-import { COLORS } from '../../constants/ui';
 
 export const P2 = styled.p`
     color: ${COLORS.secondText};

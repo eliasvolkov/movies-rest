@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
+import { Navigation } from 'components/molecules/Navigation/Navigation';
 import { LINKS } from 'constants/header';
-import { Navigation } from 'molecules/Navigation/Navigation';
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Container } from 'styled-bootstrap-grid';

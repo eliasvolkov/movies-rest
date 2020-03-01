@@ -1,4 +1,4 @@
-import { Hero } from 'organisms/Hero/Hero';
+import { Hero } from 'components/organisms/Hero/Hero';
 import React, { useEffect, useState } from 'react';
 import { Route } from 'react-router-dom';
 import { Trends } from './Trends/Trends';
