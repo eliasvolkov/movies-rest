@@ -12,6 +12,21 @@ export const getPopularMovies = async (page: number = 1) => {
     return response.data;
 };
 
+export const getMovie = async (movieId: number) => {
+    const url = `${baseUrl}/movie/${movieId}?${keyQuery}&language=en-US`;
+
+    const response = await axios.get(url);
+
+    return response.data;
+};
+
+export const getHeroMovies = async () => {
+    const moviesId = [37710, 273481, 529216];
+    const movies = await Promise.all(moviesId.map(movieId => getMovie(movieId)));
+
+    return movies;
+};
+
 export const searchMovies = async (page: number = 1, query: string) => {
     const url = `${baseUrl}/search/movie?${keyQuery}&language=en-US&query=${query}&page=${page}&include_adult=false`;
 

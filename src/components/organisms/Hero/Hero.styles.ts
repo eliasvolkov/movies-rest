@@ -7,11 +7,16 @@ interface IHeroWrapper {
     backgroundImage: string | null;
 }
 export const HeroWrapper = styled.div<IHeroWrapper>`
+    display: flex;
+    flex-flow: column wrap;
     position: relative;
     background: ${({ backgroundImage }) =>
         `#fff url(https://image.tmdb.org/t/p/original${backgroundImage}) no-repeat center /cover`};
-    height: 100vh;
+    min-height: 100vh;
+    padding: 30rem 0 10rem 0;
+    box-sizing: border-box;
     z-index: 3;
+    transition: all 1s;
 
     &:after {
         content: '';
@@ -23,11 +28,6 @@ export const HeroWrapper = styled.div<IHeroWrapper>`
         left: 0;
         background-color: rgba(0, 0, 0, 0.65);
         z-index: -1;
-    }
-
-    @media screen and (max-width: 380px) {
-        /* height: auto; */
-        padding-bottom: 7rem;
     }
 `;
 
@@ -42,7 +42,7 @@ export const Row = styled.div`
 `;
 
 export const InfoWrapper = styled.div`
-    margin-top: 30rem;
+    transition: all 1s;
 `;
 
 export const P3 = styled.p`
@@ -86,6 +86,7 @@ export const Buttons = styled.div`
     flex-wrap: wrap;
     align-items: center;
     margin-top: 7rem;
+    transition: all 5s;
 `;
 
 export const PrimaryButton = styled.div`
@@ -100,5 +101,29 @@ export const Icon = styled(Add)`
 export const StyledInfo = styled(MoreVertical)`
     color: ${COLORS.primaryText};
     width: 3.5rem;
-    /* margin-right: 1.2rem; */
+`;
+
+export const SliderDots = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+`;
+
+interface ISliderDot {
+    isActive?: boolean;
+}
+
+export const SliderDot = styled.div<ISliderDot>`
+    width: 5rem;
+    height: 0.3rem;
+    background-color: ${({ isActive }) => (isActive ? `${COLORS.primaryText}` : `${COLORS.darkgrey}`)};
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:not(:first-child) {
+        margin-left: 2rem;
+    }
 `;
