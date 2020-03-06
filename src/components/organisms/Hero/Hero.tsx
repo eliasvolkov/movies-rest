@@ -2,6 +2,7 @@ import { Button } from 'components/atoms/Button/Button';
 import { Headline1 } from 'components/atoms/Headline1/Headline1';
 import { Rating } from 'components/atoms/Rating/Rating';
 import { Subtitle1 } from 'components/atoms/Subtitle1/Subtitle1';
+import { formatMovieDuration } from 'helpers/formatFunctions';
 import React from 'react';
 import { Col, Container } from 'styled-bootstrap-grid';
 import { Genre } from 'types/MovieDetails';
@@ -16,26 +17,43 @@ import {
     Rate,
     RateWrapper,
     Row,
+    SliderDot,
+    SliderDots,
     StyledInfo,
 } from './Hero.styles';
 
 interface IHeroProps {
+    id: number;
     title: string;
     overview: string;
     runtime: number;
     vote_average: number;
     backdrop_path: string | null;
     genres: Genre[];
+    handleClick: (index: number) => void;
+    indexOfMovie: number;
+    activeMovieId: number;
 }
 
-export const Hero: React.FC<IHeroProps> = ({ title, overview, runtime, vote_average, genres, backdrop_path }) => {
+export const Hero: React.FC<IHeroProps> = ({
+    id,
+    title,
+    overview,
+    runtime,
+    vote_average,
+    genres,
+    backdrop_path,
+    handleClick,
+    indexOfMovie,
+    activeMovieId,
+}) => {
     return (
-        <HeroWrapper backgroundImage={backdrop_path}>
+        <HeroWrapper backgroundImage={backdrop_path} isShown={id === activeMovieId}>
             <Container>
                 <Row>
                     <Col sm={8} md={6} smOffset={1}>
                         <InfoWrapper>
-                            <P3>Duration: {runtime}</P3>
+                            <P3>Duration: {formatMovieDuration(runtime)}</P3>
                             <RateWrapper>
                                 <Rate>
                                     <Rating title={vote_average} iconSize={21} color="white" fontSize="1.8rem" />
@@ -60,6 +78,11 @@ export const Hero: React.FC<IHeroProps> = ({ title, overview, runtime, vote_aver
                     </Col>
                 </Row>
             </Container>
+            <SliderDots>
+                {[0, 0, 0].map((item, index) => (
+                    <SliderDot isActive={index === indexOfMovie} onClick={() => handleClick(index)} key={index} />
+                ))}
+            </SliderDots>
         </HeroWrapper>
     );
 };
