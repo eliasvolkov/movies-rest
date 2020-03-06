@@ -5,9 +5,11 @@ import { Add } from 'styled-icons/remix-fill/Add';
 
 interface IHeroWrapper {
     backgroundImage: string | null;
+    isShown: boolean;
 }
 export const HeroWrapper = styled.div<IHeroWrapper>`
-    display: flex;
+    display: ${({ isShown }) => (isShown ? 'flex' : 'none')};
+    /* display: flex; */
     flex-flow: column wrap;
     position: relative;
     background: ${({ backgroundImage }) =>
@@ -17,6 +19,15 @@ export const HeroWrapper = styled.div<IHeroWrapper>`
     box-sizing: border-box;
     z-index: 3;
     transition: all 1s;
+    /* opacity: ${({ isShown }) => {
+        return setTimeout(() => {
+            return isShown ? '1' : '0';
+        }, 2000);
+    }}; */
+    opacity: ${({ isShown }) => (isShown ? '1' : '0')};
+
+     /* overflow: visible; */
+
 
     &:after {
         content: '';

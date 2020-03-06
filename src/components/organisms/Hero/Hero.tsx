@@ -23,6 +23,7 @@ import {
 } from './Hero.styles';
 
 interface IHeroProps {
+    id: number;
     title: string;
     overview: string;
     runtime: number;
@@ -31,9 +32,11 @@ interface IHeroProps {
     genres: Genre[];
     handleClick: (index: number) => void;
     indexOfMovie: number;
+    activeMovieId: number;
 }
 
 export const Hero: React.FC<IHeroProps> = ({
+    id,
     title,
     overview,
     runtime,
@@ -42,9 +45,10 @@ export const Hero: React.FC<IHeroProps> = ({
     backdrop_path,
     handleClick,
     indexOfMovie,
+    activeMovieId,
 }) => {
     return (
-        <HeroWrapper backgroundImage={backdrop_path}>
+        <HeroWrapper backgroundImage={backdrop_path} isShown={id === activeMovieId}>
             <Container>
                 <Row>
                     <Col sm={8} md={6} smOffset={1}>
@@ -76,7 +80,7 @@ export const Hero: React.FC<IHeroProps> = ({
             </Container>
             <SliderDots>
                 {[0, 0, 0].map((item, index) => (
-                    <SliderDot isActive={index === indexOfMovie} onClick={() => handleClick(index)} />
+                    <SliderDot isActive={index === indexOfMovie} onClick={() => handleClick(index)} key={index} />
                 ))}
             </SliderDots>
         </HeroWrapper>
